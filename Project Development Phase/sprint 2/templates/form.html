@@ -1,0 +1,24 @@
+
+{% extends 'basedash.html' %}
+
+
+{% block content %}
+
+    <form action="/requestform" method="post">
+        Name :<br>
+       <input  name='name' ><br>
+       
+       Blood Group: <br>
+       <input  name='bg' ><br>
+     
+       Location:<br>
+       <input type="text" name='loc'><br>
+     
+       Hospital Name :<br>
+       <input  type="text" name='hosp' ><br><br>
+     
+       <input type="submit" value="Submit">
+     </form>
+     
+
+{% endblock content %}
