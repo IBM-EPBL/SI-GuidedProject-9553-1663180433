@@ -1,0 +1,42 @@
+{% extends 'basedash.html' %}
+
+
+{% block content %}
+
+{% for record in requestarray  %}
+    
+
+{% if record[6] == "waiting" %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{record[2]}}</h5>
+        <p class="card-text">{{record[3]}}</p>
+        <p class="card-text">{{record[4]}}</p>
+        <p class="card-text">{{record[5]}}</p>
+        <a href="#" class="btn btn-primary disabled" disabled>Donate</a>
+    </div>
+</div>
+    
+{% endif %}
+
+{% endfor %}
+
+{% for record in accptedarr  %}
+    
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{record[2]}}</h5>
+        <p class="card-text">{{record[3]}}</p>
+        <p class="card-text">your request is accepted by {{record[8]}}</p>
+        <p class="card-text">{{record[5]}} -{{record[4]}}</p>
+        <a href="#" class="btn btn-primary disabled " >Donate</a>
+    </div>
+</div>
+
+
+{% endfor %}
+
+{% endblock content %}
+
